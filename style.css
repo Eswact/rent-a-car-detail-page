@@ -1,0 +1,300 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBar{
+    position: fixed;
+    top: 6px;
+    box-sizing: border-box;
+    width: 85%;
+    height: 80px;
+    padding: 44px 50px;
+    border-bottom: 1px solid rgba(28, 66, 79, 0.37);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navBar i{
+    transform: scale(1.5);
+}
+
+.navBar-left{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: 8%;
+}
+
+.navBar-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: #1C424F;
+}
+
+.navBar-element{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: #1C424F;
+    padding: 5px 0;
+}
+
+.navBar-element.selected{
+    color: #EE605F;
+    border-bottom: 2px solid #EE605F;
+}
+
+.navBar-element span{
+    font-size: 24px;
+}
+
+.navBar-title span{
+    font-size: 34px;
+}
+
+.logo{
+    border-radius: 50%;
+    height: 68px;
+}
+
+.card{
+    width: 85%;                                 
+    margin-top: 115px;
+}
+
+.car-detail{
+    width: 100%;
+    display: flex;
+    padding-top: 20px;
+}
+
+.car-detail-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.car-detail-right{
+    box-sizing: border-box;
+    width: 50%;
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.imgDiv{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 1%;
+    width: 100%;
+}
+
+.car-images{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 2%;
+}
+
+.mini-images{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 2%;
+    gap: 2%;
+}
+
+.car-img{
+    box-sizing: border-box;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.car-images:hover .img-nb{
+    opacity: 100%;
+}
+
+.mini-img{
+    box-sizing: border-box;
+    width: 23%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    overflow: hidden;
+}
+
+.mini-img img{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none
+}
+
+.mini-img.selected{
+    border: 2px solid #1C424F;
+}
+
+.mini-img.selected img{
+    opacity: 37%;
+}
+
+.img-nb{ 
+    cursor: pointer;
+    position: absolute;
+    color: white;
+    opacity: 0%;
+    transition: all 200ms ease-in-out;
+    align-self: center;
+}
+.img-back{
+    margin-left: 12px;
+}
+.img-next{
+    margin-left: -40px;
+}
+
+.car-head{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.car-name{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.car-name img{
+    border-radius: 50%;
+    background-color: white;
+    width: 80px;
+    padding: 20px 0;
+}
+
+.car-name span{
+    font-size: 40px;
+    font-weight: 500;
+    color: #1C424F;
+}
+
+.car-description{
+    font-size: 19px;
+    box-sizing: border-box;
+    max-width: 80%;
+    padding: 4px;
+}
+
+.detail-card{
+    display: flex;
+    gap: 10%;
+    align-items: center;
+    padding: 1%;
+}
+
+.car-features span{
+    color: #2C222F;
+}
+
+.car-conditions span{
+    color: #EE605F;
+}
+
+.detail-card div{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.detail-card div span{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+}
+.detail-card div span i{
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rentBut{
+    width: 180px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 151, 70, 0.75);
+    box-shadow: 0px 0px 2px 1px rgba(0, 151, 70, 0.37);
+    color: #009746;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: transparent;
+    transition: all 370ms ease-in-out;
+    z-index: 1;
+    cursor: pointer;
+}
+.rentBut:hover{
+    box-shadow: 0px 0px 2px 1px rgba(0, 151, 70, 0.37), inset 10.5em 0 0 0 rgba(0, 151, 70, 0.25), inset -10.5em 0 0 0 rgba(0, 151, 70, 0.25);
+    transform: scale(1.037);
+    color: white;
+}
+
+.rentPlans{
+    margin: 10px;
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.rentPlans .rentPrice{
+    font-size: 24px;
+    font-weight: 500;
+    color: #EE605F;
+}
+
+.rentPlans .rentPriceDaily{
+    font-size: 13px;
+    font-weight: 300;
+    color: #1C424F;
+    padding-bottom: 3px;
+}
+
+.otherCars{
+    margin-top: 30px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid rgba(28, 66, 79, 0.2);
+}
+
+.otherCars div{
+    width: 360px;
+    height: 180px;
+    border: 1px solid #ddd;
+}
