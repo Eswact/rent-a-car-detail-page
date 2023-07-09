@@ -14,3 +14,23 @@ $(".mini-img").click(function(){
     });
 });
 $(".mini-img")[0].click();
+$(".img-next").click(function(){
+    var visible = $(".car-img:visible").data("img");
+    if(visible == 4){
+        var newVisible = 1
+    }
+    else{
+        var newVisible = ++visible;
+    }
+    $(".mini-img[data-img=" + newVisible +"]").click();
+});
+$(".img-back").click(function(){
+    var visible = $(".car-img:visible").data("img");
+    if(visible == 1){
+        var newVisible = 4
+    }
+    else{
+        var newVisible = --visible;
+    }
+    $(".mini-img[data-img=" + newVisible +"]").click();
+});

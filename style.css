@@ -8,15 +8,17 @@ body {
 
 .navBar {
     position: fixed;
-    top: 6px;
+    top: 0;
     box-sizing: border-box;
     width: 85%;
     height: 80px;
-    padding: 44px 50px;
+    padding: 50px 50px 44px 50px;
     border-bottom: 1px solid rgba(28, 66, 79, 0.37);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: white;
+    z-index: 100;
 }
 
 .navBar i {
@@ -87,6 +89,12 @@ body {
     box-sizing: border-box;
     width: 50%;
     padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.dr-inside-flx{
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -250,9 +258,9 @@ body {
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid rgba(0, 151, 70, 0.75);
-    box-shadow: 0px 0px 2px 1px rgba(0, 151, 70, 0.37);
-    color: #009746;
+    border: 1px solid #00823cbf;
+    box-shadow: 0px 0px 2px 1px rgba(0, 130, 60, 0.37);
+    color: #00823cbf;
     font-size: 18px;
     font-weight: 500;
     background-color: transparent;
@@ -262,7 +270,7 @@ body {
 }
 
 .rentBut:hover {
-    box-shadow: 0px 0px 2px 1px rgba(0, 151, 70, 0.37), inset 10.5em 0 0 0 rgba(0, 151, 70, 0.25), inset -10.5em 0 0 0 rgba(0, 151, 70, 0.25);
+    box-shadow: 0px 0px 2px 1px rgba(0, 130, 60, 0.37), inset 10.5em 0 0 0 rgba(0, 130, 60, 0.25), inset -10.5em 0 0 0 rgba(0, 130, 60, 0.25);
     transform: scale(1.037);
     color: white;
 }
@@ -291,14 +299,131 @@ body {
     margin-top: 30px;
     box-sizing: border-box;
     width: 100%;
-    padding: 20px 40px;
+    padding: 30px 40px;
     display: flex;
     justify-content: space-around;
     border-top: 1px solid rgba(28, 66, 79, 0.2);
+    overflow: auto;
 }
 
 .otherCars div {
-    width: 360px;
+    box-sizing: border-box;
+    width: 23%;
     height: 180px;
     border: 1px solid #ddd;
+    padding: 20px 40px;
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    min-width: 320px;
+}
+
+@media screen and (max-width:1600px) {
+    .otherCars {
+        padding: 30px 20px 0 20px;
+        justify-content: unset;
+        gap: 20px;
+        border-top: 1px solid rgba(28, 66, 79, 0.2);
+        overflow: auto;
+    }
+    
+    .otherCars div {
+        min-width: 320px;
+    }
+}
+
+@media screen and (max-width:1300px) {
+    .navBar-element span{
+        display: none;
+    }
+    .car-detail{
+        flex-direction: column;
+    }
+    .car-detail-left{
+        width: 100%;
+    }
+    .car-detail-right{
+        width: 100%;
+    }
+    .dr-inside-flx{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .car-detail-right{
+        gap: 20px;
+    }
+    .dr-inside-flx{
+        flex-direction: column;
+        justify-content: unset;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    .car-description{
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .navBar {
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .card{
+        width: 100%;
+        margin-top: 75px;
+    }
+
+    .navBar-left {
+        width: 100%;
+        justify-content: space-between;
+        gap: unset;
+    }
+
+    .navBar i {
+        transform: scale(1.25);
+    }
+
+    .navBar-title {
+        gap: 10px;
+    }
+    
+    .navBar-element {
+        gap: 10px;
+    }
+    
+    .navBar-title span {
+        font-size: 25px;
+    }
+    
+    .logo {
+        border-radius: 50%;
+        height: 50px;
+    }
+
+    .car-img{
+        height: 200px;
+    }
+
+    .mini-images{
+        display: none;
+    }
+
+    .fa-circle-question{
+        display: none;
+    }
+
+    .otherCars {
+        padding: 20px;
+    }
+
+    .img-nb {
+        opacity: 100%;
+    }
 }
