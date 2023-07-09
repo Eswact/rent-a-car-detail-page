@@ -38,6 +38,7 @@ body {
     align-items: center;
     gap: 20px;
     color: #1C424F;
+    cursor: pointer;
 }
 
 .navBar-element {
@@ -47,6 +48,11 @@ body {
     gap: 16px;
     color: #1C424F;
     padding: 5px 0;
+    cursor: pointer;
+}
+
+.navBar-element:hover {
+    color: #EE605F;
 }
 
 .navBar-element.selected {
@@ -94,7 +100,7 @@ body {
     gap: 40px;
 }
 
-.dr-inside-flx{
+.dr-inside-flx {
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -318,6 +324,14 @@ body {
     font-size: 20px;
     cursor: pointer;
     min-width: 320px;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    box-shadow: inset 0 -52px 10px -5px rgba(0, 0, 0, 0.65);
+    transition: all 200ms ease-in-out;
+}
+
+.otherCars div:hover {
+    box-shadow: inset 0 -60px 10px -5px rgba(0, 0, 0, 0.85);
 }
 
 @media screen and (max-width:1600px) {
@@ -328,26 +342,30 @@ body {
         border-top: 1px solid rgba(28, 66, 79, 0.2);
         overflow: auto;
     }
-    
+
     .otherCars div {
         min-width: 320px;
     }
 }
 
 @media screen and (max-width:1300px) {
-    .navBar-element span{
+    .navBar-element span {
         display: none;
     }
-    .car-detail{
+
+    .car-detail {
         flex-direction: column;
     }
-    .car-detail-left{
+
+    .car-detail-left {
         width: 100%;
     }
-    .car-detail-right{
+
+    .car-detail-right {
         width: 100%;
     }
-    .dr-inside-flx{
+
+    .dr-inside-flx {
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-end;
@@ -355,16 +373,18 @@ body {
 }
 
 @media screen and (max-width:800px) {
-    .car-detail-right{
+    .car-detail-right {
         gap: 20px;
     }
-    .dr-inside-flx{
+
+    .dr-inside-flx {
         flex-direction: column;
         justify-content: unset;
         gap: 20px;
         align-items: flex-start;
     }
-    .car-description{
+
+    .car-description {
         max-width: 100%;
     }
 }
@@ -375,7 +395,7 @@ body {
         padding: 40px 20px;
     }
 
-    .card{
+    .card {
         width: 100%;
         margin-top: 75px;
     }
@@ -393,29 +413,29 @@ body {
     .navBar-title {
         gap: 10px;
     }
-    
+
     .navBar-element {
         gap: 10px;
     }
-    
+
     .navBar-title span {
         font-size: 25px;
     }
-    
+
     .logo {
         border-radius: 50%;
         height: 50px;
     }
 
-    .car-img{
+    .car-img {
         height: 200px;
     }
 
-    .mini-images{
+    .mini-images {
         display: none;
     }
 
-    .fa-circle-question{
+    .fa-circle-question {
         display: none;
     }
 
@@ -425,5 +445,21 @@ body {
 
     .img-nb {
         opacity: 100%;
+    }
+
+    .car-description {
+        font-size: 18px;
+    }
+
+    .car-name span {
+        font-size: 36px;
+    }
+
+    .car-name img {
+        width: 72px;
+    }
+
+    .fa-2x {
+        font-size: 1.75em;
     }
 }
